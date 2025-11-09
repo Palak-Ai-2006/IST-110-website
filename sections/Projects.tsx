@@ -13,7 +13,11 @@ export default function Projects() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = parseInt(entry.target.getAttribute('data-index') || '0')
-            setVisibleCards((prev) => new Set([...prev, index]))
+            setVisibleCards((prev) => {{
+              const newSet = new Set(prev)
+                newSet.add(index)
+                return newSet
+              })
           }
         })
       },
