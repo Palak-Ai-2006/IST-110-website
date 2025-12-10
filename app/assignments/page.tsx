@@ -1,7 +1,28 @@
 import ContentCard from '@/components/ContentCard'
 
-const assignments = [
-  { title: 'Assignment 1: Foundations' },
+type Assignment = {
+  title: string
+  description?: string
+  reflection?: string
+  image?: string
+  preview?: string
+  link?: string
+  metadata?: { label: string; value: string }[]
+}
+
+const assignments: Assignment[] = [
+  { 
+    title: 'Assignment 1: Foundations', 
+    description: 'This assignment introduced the fundamental concepts of information systems and technology.',
+    reflection: 'This assignment helped me understand the core principles of IST.',
+    // Use preview (OneDrive embed) - This will show an embedded preview
+    preview: 'https://pennstateoffice365-my.sharepoint.com/personal/pkc5358_psu_edu/_layouts/15/Doc.aspx?sourcedoc={fa88eaaa-2343-48e1-8d76-263bebb693ec}&action=embedview&wdStartOn=1&wdEmbedCode=0&wdHideHeaders=1',
+    link: 'https://pennstateoffice365-my.sharepoint.com/:w:/r/personal/pkc5358_psu_edu/Documents/IST%20110%20Treasure%20Hunt.docx?d=wfa88eaaa234348e18d76263bebb693ec&csf=1&web=1&e=v9eQkc',
+    metadata: [
+      { label: 'Format', value: 'Microsoft Word Document' },
+      { label: 'Date Completed', value: 'January 15, 2024' },
+    ]
+  },
   { title: 'Assignment 2: Research Brief' },
   { title: 'Assignment 3: Prototype Planning' },
   { title: 'Assignment 4: User Testing' },
@@ -24,13 +45,13 @@ export default function AssignmentsPage() {
             <ContentCard
               key={assignment.title}
               title={assignment.title}
-              description="Add a short description of the assignment goals."
-              reflection="Add your personal takeaways or challenges."
-              metadata={[
-                { label: 'Screenshot', value: 'Add an image or link' },
-                { label: 'Notes', value: 'Add tools, methods, or requirements' },
-              ]}
-              showPlaceholders
+              description={assignment.description}
+              reflection={assignment.reflection}
+              image={assignment.image}
+              preview={assignment.preview}
+              link={assignment.link}
+              metadata={assignment.metadata}
+              showPlaceholders={!assignment.description}
             />
           ))}
         </div>
@@ -38,5 +59,6 @@ export default function AssignmentsPage() {
     </main>
   )
 }
+
 
 

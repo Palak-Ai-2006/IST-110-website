@@ -3,6 +3,7 @@ interface ContentCardProps {
   description?: string
   reflection?: string
   image?: string
+  preview?: string
   link?: string
   metadata?: { label: string; value: string }[]
   showPlaceholders?: boolean
@@ -13,6 +14,7 @@ export default function ContentCard({
   description,
   reflection,
   image,
+  preview,
   link,
   metadata,
   showPlaceholders = true,
@@ -21,7 +23,32 @@ export default function ContentCard({
     <div className="group flex flex-col gap-4 rounded-sm border border-white/10 bg-black/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20">
       <div className="relative w-full overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-white/5 to-white/0">
         <div className="aspect-video w-full">
-          {image ? (
+          {preview ? (
+            <div 
+            className="absolute"
+            style={{
+              width: '200%',
+              height: '200%',
+              left: '-50%',
+              top: '-50%',
+              transform: 'scale(0.5)',
+              transformOrigin: 'center center',
+            }}
+          >
+              <iframe
+                src={preview}
+                className="h-full w-full border-0"
+                allow="fullscreen"
+                allowFullScreen
+                title={`${title} preview`}
+                loading="lazy"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                }}
+              /> 
+              </div>
+          ) : image ? (
             <img
               src={image}
               alt={`${title} visual`}
@@ -104,5 +131,6 @@ export default function ContentCard({
     </div>
   )
 }
+
 
 
