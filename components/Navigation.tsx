@@ -6,7 +6,7 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('hero')
   const [isScrolling, setIsScrolling] = useState(false)
 
-  const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+  const sections = ['hero', 'about', 'ist110', 'skills', 'projects', 'contact']
 
   const updateActiveSection = useCallback(() => {
     const scrollPosition = window.scrollY
@@ -93,6 +93,7 @@ export default function Navigation() {
   const navItems = [
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'ist110', label: 'IST110' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
