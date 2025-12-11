@@ -29,7 +29,8 @@ export default function ContentCard({
               // Local PDF file - embed with scrolling
               <div className="absolute inset-0 overflow-y-auto overflow-x-hidden">
                 <iframe
-                  src={preview}
+                  // was: src={preview}
+                  src={`${preview}#navpanes=0&toolbar=0&view=FitH`}
                   className="h-full w-full border-0"
                   title={`${title} preview`}
                   loading="lazy"
