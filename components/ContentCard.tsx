@@ -22,7 +22,7 @@ export default function ContentCard({
   return (
     <div className="group flex flex-col gap-4 rounded-sm border border-white/10 bg-black/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20">
       <div className="relative w-full overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-white/5 to-white/0">
-        <div className="aspect-video w-full">
+        <div className="aspect-video w-full relative">
           {preview ? (
             <div 
             className="absolute"
@@ -49,11 +49,14 @@ export default function ContentCard({
               /> 
               </div>
           ) : image ? (
-            <img
-              src={image}
-              alt={`${title} visual`}
-              className="h-full w-full object-cover"
-            />
+            <div className="absolute inset-0 overflow-y-auto overflow-x-hidden">
+              <img
+                src={image}
+                alt={`${title} visual`}
+                className="w-full h-auto"
+                style={{ minHeight: '100%' }}
+              />
+            </div>
           ) : (
             <div className="flex h-full w-full items-center justify-center text-sm text-white/50">
               Add your screenshot or drop a link preview
