@@ -35,8 +35,8 @@ const discussions: Discussion[] = [
   },
   {
     title: 'Discussion 3',
-    description: 'This discussion focused on creating an Excel macro that automates formatting tasks to improve efficiency and consistency.',
-    reflection: 'Building the macro showed me how small automations can save time and eliminate repetitive work. I also learned the importance of understanding macros for productivity, along with being cautious when enabling them in unfamiliar files.',
+    description: '',
+    reflection: '',
     image: '/discussions/Diss 3 .png',
     link: '/discussions/Diss 3 .png',
     metadata: [
@@ -46,8 +46,8 @@ const discussions: Discussion[] = [
   },
   {
     title: 'Discussion 4',
-    description: 'This post explained differences between machine language, assembly language, and high-level languages, and their roles in modern software development.',
-    reflection: 'I gained a clearer understanding of how programming abstractions evolved to make development easier while still relying on low-level languages for performance-critical tasks. It showed me why high-level languages dominate everyday software but hardware-specific languages remain essential in systems programming.',
+    description: '',
+    reflection: '',
     image: '/discussions/Diss 4.png',
     link: '/discussions/Diss 4.png',
     metadata: [
@@ -57,8 +57,8 @@ const discussions: Discussion[] = [
   },
   {
     title: 'Discussion 5',
-    description: 'This discussion used a creative letter to explain why YouTube Music is meaningful and how digital tools shape everyday routines.',
-    reflection: 'Reflecting on this app made me realize how integrated technology is in my daily life. Writing the letter helped me appreciate how software influences mood, habits, and the overall experience of moving through the day.',
+    description: '',
+    reflection: '',
     image: '/discussions/Diss 5.png',
     link: '/discussions/Diss 5.png',
     metadata: [
@@ -68,8 +68,8 @@ const discussions: Discussion[] = [
   },
   {
     title: 'Discussion Post 6',
-    description: 'This post outlined major hardware components—CPU, RAM, storage, and I/O devices—and described how hardware has evolved over time.',
-    reflection: 'Summarizing these components strengthened my understanding of how computers function and how hardware improvements drive performance. Seeing the evolution from large early machines to today’s compact devices highlighted the pace of technological advancement.',
+    description: '',
+    reflection: '',
     image: '/discussions/Diss 6.png',
     link: '/discussions/Diss 6.png',
     metadata: [

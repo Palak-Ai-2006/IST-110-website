@@ -10,10 +10,10 @@ export default function ReflectionPage() {
 
         <div className="space-y-6 text-white/70 leading-relaxed">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse posuere, arcu in euismod varius, orci nibh sagittis libero, ut tincidunt turpis nibh vel ligula. Integer eget rhoncus ipsum. Vivamus sit amet maximus elit, non hendrerit elit. Praesent pulvinar lacus sed leo hendrerit, ut tincidunt mi pharetra. Suspendisse ut dapibus tortor. Integer a nunc viverra, ultricies mauris quis, sagittis libero.
+          Throughout IST 110, I gained a stronger understanding of how information systems work and why they are so important in everyday life. The assignments and discussions helped me explore topics like databases, operating systems, the Internet, programming languages, and computer hardware. Working on SQL, Excel macros, device teardowns, and OS comparisons showed me how technology functions behind the scenes and how even small design choices can affect performance, security, and usability.
           </p>
           <p>
-            Curabitur blandit, urna eu interdum facilisis, lacus turpis ornare orci, id iaculis arcu erat eu orci. Quisque congue lacus id erat molestie, non efficitur velit volutpat. Fusce nec tortor sit amet elit cursus rhoncus. Mauris vitae leo arcu. Donec posuere neque eget sapien rhoncus, eget convallis ligula lacinia. Aliquam erat volutpat. Suspendisse sodales, odio sit amet tincidunt hendrerit, sem massa varius magna, eget mattis enim nulla in metus.
+          The course also helped me reflect on how technology shapes people’s routines, decisions, and interactions. Whether it was studying privacy concerns, researching how companies use IT, or analyzing personal tools like YouTube Music, I learned how deeply technology is integrated into modern life. Overall, IST 110 strengthened both my technical foundation and my awareness of technology’s impact on society, preparing me to engage with digital systems more thoughtfully and responsibly.          
           </p>
         </div>
       </div>
