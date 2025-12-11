@@ -24,30 +24,47 @@ export default function ContentCard({
       <div className="relative w-full overflow-hidden rounded-sm border border-white/10 bg-gradient-to-br from-white/5 to-white/0">
         <div className="aspect-video w-full relative">
           {preview ? (
-            <div 
-            className="absolute"
-            style={{
-              width: '200%',
-              height: '200%',
-              left: '-50%',
-              top: '-50%',
-              transform: 'scale(0.5)',
-              transformOrigin: 'center center',
-            }}
-          >
-              <iframe
-                src={preview}
-                className="h-full w-full border-0"
-                allow="fullscreen"
-                allowFullScreen
-                title={`${title} preview`}
-                loading="lazy"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-              /> 
+            // Check if preview is a PDF or external iframe
+            preview.endsWith('.pdf') || preview.startsWith('/') ? (
+              // Local PDF file - embed with scrolling
+              <div className="absolute inset-0 overflow-y-auto overflow-x-hidden">
+                <iframe
+                  src={preview}
+                  className="h-full w-full border-0"
+                  title={`${title} preview`}
+                  loading="lazy"
+                  style={{
+                    minHeight: '100%',
+                  }}
+                />
               </div>
+            ) : (
+              // External iframe preview (SharePoint, etc.) - scaled view
+              <div 
+                className="absolute"
+                style={{
+                  width: '200%',
+                  height: '200%',
+                  left: '-50%',
+                  top: '-50%',
+                  transform: 'scale(0.5)',
+                  transformOrigin: 'center center',
+                }}
+              >
+                <iframe
+                  src={preview}
+                  className="h-full w-full border-0"
+                  allow="fullscreen"
+                  allowFullScreen
+                  title={`${title} preview`}
+                  loading="lazy"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                  }}
+                /> 
+              </div>
+            )
           ) : image ? (
             <div className="absolute inset-0 overflow-y-auto overflow-x-hidden">
               <img
